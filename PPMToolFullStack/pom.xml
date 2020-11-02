@@ -12,7 +12,7 @@
     <artifactId>ppmtool</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ppmtool</name>
-    <description>Personal Project Managemet Tool</description>
+    <description>Personal Project Management Tool</description>
 
     <properties>
         <java.version>11</java.version>
