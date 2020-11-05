@@ -28,6 +28,21 @@ public class ProjectService {
     }
 
     public Project findProjectByIdentifier(String projectId){
-        return projectRepository.findByProjectIdentifier(projectId);
+        Project project = projectRepository.findByProjectIdentifier(projectId.toUpperCase());
+        if (project == null){
+            throw new ProjectIdException(
+                    "Проект с идентификатором '" + projectId + "' не найден"
+            );
+        }
+        return project;
+    }
+
+    public Iterable<Project> findAllProjects(){
+        return projectRepository.findAll();
+    }
+
+    public void deleteObjectById(String projectId){
+        Project project = projectRepository.findByProjectIdentifier(projectId.toUpperCase());
+        projectRepository.delete(project);
     }
 }
