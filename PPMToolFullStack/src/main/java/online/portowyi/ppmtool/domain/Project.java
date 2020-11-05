@@ -22,7 +22,7 @@ public class Project {
     private String projectName;
 
     @NotBlank(message = "Идентификатор проекта не может быть пустым")
-    @Size(min = 4, max = 7, message = "Длина идентификатора не может быть короче 4-х символов и длиннее 7-ми сиволов")
+    @Size(min = 4, max = 10, message = "Длина идентификатора не может быть короче 4-х символов и длиннее 7-ми сиволов")
     @Column(updatable = false, unique = true)
     private String projectIdentifier;
 
